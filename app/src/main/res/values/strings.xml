@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Alquemix</string>
+
+    <!-- Preguntas del Quiz -->
+    <string name="pregunta_1">¿Qué tipo de reacción es: 2H₂ + O₂ → 2H₂O?</string>
+    <string name="pregunta_2">¿En qué reacción se forma sal + agua?</string>
+    <string name="pregunta_3">¿Qué indica el símbolo (aq)?</string>
+    <string name="pregunta_4">¿Qué reacción libera calor?</string>
+    <string name="pregunta_5">¿Qué acelera una reacción sin consumirse?</string>
+
+    <!-- Opciones comunes -->
+    <string name="opcion_descomposicion">Descomposición</string>
+    <string name="opcion_sintesis">Síntesis</string>
+    <string name="opcion_desplazamiento">Desplazamiento</string>
+    <string name="opcion_neutralizacion">Neutralización</string>
+    <string name="opcion_combustion">Combustión</string>
+    <string name="opcion_redox">Redox</string>
+    <string name="opcion_gas">Gas</string>
+    <string name="opcion_liquido">Líquido</string>
+    <string name="opcion_disuelto">Disuelto en agua</string>
+    <string name="opcion_solido">Sólido</string>
+    <string name="opcion_endotermica">Endotérmica</string>
+    <string name="opcion_exotermica">Exotérmica</string>
+    <string name="opcion_isotermica">Isotérmica</string>
+    <string name="opcion_reactivo">Reactivo</string>
+    <string name="opcion_catalizador">Catalizador</string>+
+    <string name="opcion_producto">Producto</string>
+    <string name="opcion_intermedio">Intermedio</string>
+
+    <!-- Textos generales -->
+    <string name="siguiente">SIGUIENTE</string>
+    <string name="correcto">¡Correcto!</string>
+    <string name="incorrecto">Incorrecto</string>
+    <string name="quiz_completado">¡Quiz Completado!</string>
+    <string name="resultado_final">Aciertos: %d / 5</string>
+    <string name="selecciona_opcion">Selecciona una opción</string>
+</resources>

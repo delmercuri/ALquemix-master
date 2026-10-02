@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "835252926134",
+    "project_id": "alquemix-306d5",
+    "storage_bucket": "alquemix-306d5.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:835252926134:android:e1d7ecf62d2bbe20fdd817",
+        "android_client_info": {
+          "package_name": "com.myapp.alquemix"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBte02VAA8AS_iY9WGv3GIDRLMDLj-niAo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

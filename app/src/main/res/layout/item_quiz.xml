@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="8dp"
+    android:backgroundTint="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical">
+
+        <!-- Círculo amarillo con número -->
+        <TextView
+            android:id="@+id/tv_numero"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/circulo_amarillo"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="#006400"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <View android:layout_width="12dp" android:layout_height="1dp"/>
+
+        <!-- Título y progreso -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_titulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Introducción a los Hidrocarburos"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tv_progreso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0% completado"
+                android:textColor="#666666"
+                android:textSize="14sp"
+                android:layout_marginTop="4dp"/>
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="8dp"
+                android:max="100"
+                android:progress="0"
+                android:progressTint="#FFD700"
+                android:progressBackgroundTint="#EEEEEE"/>
+        </LinearLayout>
+
+        <View android:layout_width="16dp" android:layout_height="1dp"/>
+
+        <!-- Botón Play -->
+        <ImageButton
+            android:id="@+id/btn_play"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="@drawable/circulo_play"
+            android:src="@android:drawable/ic_media_play"
+            android:scaleType="centerInside"
+            android:contentDescription="Jugar quiz"
+            android:backgroundTint="#FFEDB5"
+            app:tint="#006400" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

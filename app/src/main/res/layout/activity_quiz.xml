@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/color1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="16dp">
+
+        <!-- ══════════════════════════════════════════════════════ -->
+        <!-- HEADER (igual que Menu Temas) -->
+        <!-- ══════════════════════════════════════════════════════ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!-- Foto de perfil clickeable -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_profile"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                app:cardCornerRadius="28dp"
+                app:cardElevation="6dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground">
+
+                <ImageView
+                    android:id="@+id/iv_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/foto1"/>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Título -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginHorizontal="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🧪 Quiz"
+                    android:textColor="#FFFFFF"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-medium"/>
+
+                <TextView
+                    android:id="@+id/tv_numero_pregunta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pregunta 1/5"
+                    android:textColor="#B0FFFFFF"
+                    android:textSize="14sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <!-- Botón cerrar -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                app:cardCornerRadius="22dp"
+                app:cardBackgroundColor="#33FFFFFF"
+                app:cardElevation="0dp">
+
+                <ImageButton
+                    android:id="@+id/btn_close"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Cerrar"
+                    android:src="@android:drawable/ic_menu_close_clear_cancel"
+                    app:tint="#FFFFFF"/>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <!-- ══════════════════════════════════════════════════════ -->
+        <!-- CARD PRINCIPAL: Pregunta y opciones -->
+        <!-- ══════════════════════════════════════════════════════ -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="28dp"
+            app:cardBackgroundColor="#1AFFFFFF"
+            app:cardElevation="0dp"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <!-- Pregunta -->
+                <TextView
+                    android:id="@+id/tv_pregunta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pregunta_1"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="center"
+                    android:lineSpacingMultiplier="1.2"
+                    android:layout_marginBottom="20dp"/>
+
+                <!-- Imagen de la pregunta -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="8dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="24dp">
+
+                    <ImageView
+                        android:id="@+id/iv_pregunta"
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/reac1"/>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Opciones con RadioGroup -->
+                <RadioGroup
+                    android:id="@+id/rg_opciones"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/rb_opcion1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/opcion_descomposicion"
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp"
+                        android:fontFamily="sans-serif-medium"
+                        android:padding="16dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/radio_button_selector"
+                        android:button="@null"
+                        android:drawableEnd="@android:drawable/btn_radio"
+                        android:drawableTint="#AAFFAA"/>
+
+                    <RadioButton
+                        android:id="@+id/rb_opcion2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/opcion_sintesis"
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp"
+                        android:fontFamily="sans-serif-medium"
+                        android:padding="16dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/radio_button_selector"
+                        android:button="@null"
+                        android:drawableEnd="@android:drawable/btn_radio"
+                        android:drawableTint="#AAFFAA"/>
+
+                    <RadioButton
+                        android:id="@+id/rb_opcion3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/opcion_neutralizacion"
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp"
+                        android:fontFamily="sans-serif-medium"
+                        android:padding="16dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/radio_button_selector"
+                        android:button="@null"
+                        android:drawableEnd="@android:drawable/btn_radio"
+                        android:drawableTint="#AAFFAA"/>
+
+                    <RadioButton
+                        android:id="@+id/rb_opcion4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/opcion_exotermica"
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp"
+                        android:fontFamily="sans-serif-medium"
+                        android:padding="16dp"
+                        android:background="@drawable/radio_button_selector"
+                        android:button="@null"
+                        android:drawableEnd="@android:drawable/btn_radio"
+                        android:drawableTint="#AAFFAA"/>
+
+                </RadioGroup>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- ══════════════════════════════════════════════════════ -->
+        <!-- BOTÓN SIGUIENTE -->
+        <!-- ══════════════════════════════════════════════════════ -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_siguiente"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="@string/siguiente"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#052450"
+            android:fontFamily="sans-serif-medium"
+            android:letterSpacing="0.05"
+            app:backgroundTint="#AAFFAA"
+            app:cornerRadius="28dp"
+            app:elevation="8dp"
+            app:rippleColor="#80FFFFFF"
+            app:icon="@android:drawable/ic_media_play"
+            app:iconGravity="end"
+            app:iconTint="#052450"/>
+
+    </LinearLayout>
+</ScrollView>
